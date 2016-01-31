@@ -5,4 +5,10 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="GridButton"
+        parent="android:Widget.ImageButton">
+        <item name="android:layout_width">200px</item>
+        <item name="android:layout_height">200px</item>
+
+    </style>
 </resources>
