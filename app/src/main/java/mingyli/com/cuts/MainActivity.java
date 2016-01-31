@@ -6,11 +6,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-    ImageView image;
+    ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +23,20 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void addListenerOnButton(){
-        image = (ImageView) findViewById(R.id.imageView);
+        imageButton = (ImageButton) findViewById(R.id.imageButton1);
 
-        Button button = (Button) findViewById(R.id.btnChangeImage);
-        button.setOnClickListener(new View.OnClickListener() {
+        imageButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                image.setImageResource(R.drawable.hair);
+
+                Toast.makeText(MainActivity.this,
+                        "ImageButton is clicked!", Toast.LENGTH_SHORT).show();
+
             }
 
         });
+
 
     }
 
