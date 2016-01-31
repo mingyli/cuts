@@ -33,10 +33,12 @@ public class MainActivity extends ActionBarActivity {
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int pos,long id) {
-                Intent i = new Intent(MainActivity.this, ProfileActivity.class);
-                i.putExtra("selectedIndex", pos);
-                startActivity(i);
+            public void onItemClick(AdapterView<?> arg0, View arg1, int pos, long id) {
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                intent.putExtra("selectedIndex", pos);
+
+                MainActivity.this.startActivity(intent);
+                System.out.println(pos);
             }
         });
     }
