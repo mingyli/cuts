@@ -36,9 +36,8 @@ public class MainActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> arg0, View arg1, int pos, long id) {
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 intent.putExtra("selectedIndex", pos);
-
                 MainActivity.this.startActivity(intent);
-                System.out.println(pos);
+
             }
         });
     }

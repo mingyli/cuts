@@ -17,11 +17,9 @@ import android.widget.LinearLayout;
 public class ImageAdapter extends BaseAdapter{
 
     private static LayoutInflater inflater = null;
-    private Activity activity;
 
-    private String mode = "";
 
-    int[] images = {
+    public static int[] images = {
             R.drawable.haircut0, R.drawable.haircut1,
             R.drawable.haircut2, R.drawable.haircut3,
             R.drawable.haircut4, R.drawable.haircut5,
@@ -31,8 +29,6 @@ public class ImageAdapter extends BaseAdapter{
 
     public ImageAdapter(Activity act, String mode){
         inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        activity = act;
-        this.mode = mode;
     }
 
     @Override
