@@ -42,7 +42,7 @@ public class UserProfileActivity extends Activity {
         name.setText("Your Name");
         barber.setText("Barber's Name");
         shampoo.setText("Your Shampoo");
-        tags.setText("#mullet #perm #wig");
+        tags.setText("#tags");
     }
 
 

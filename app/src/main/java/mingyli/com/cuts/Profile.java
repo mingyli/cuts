@@ -2,9 +2,7 @@ package mingyli.com.cuts;
 
 import java.util.ArrayList;
 
-/**
- * Created by cng on 1/31/16.
- */
+
 public class Profile {
     private String name;
     private double hair_length;
@@ -23,7 +21,7 @@ public class Profile {
         shampoo_name = "Head and Shoulders";
         tags_list = new ArrayList<String>() {{
             add("#fade");
-            add("#buzzcut");
+            add("#mullet");
             add("#perm");
         }};
 
