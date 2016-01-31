@@ -8,11 +8,8 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-/**
- * Created by Ming on 1/31/2016.
- */
+
 public class UserProfileActivity extends Activity {
     ImageView iv = null;
 
@@ -42,14 +39,10 @@ public class UserProfileActivity extends Activity {
         EditText shampoo = (EditText) findViewById(R.id.shampooText);
         EditText tags = (EditText) findViewById(R.id.tagsText);
 
-        Profile prof = new Profile();
-        name.setText(prof.getName());
-        barber.setText(prof.getBarber_name());
-        shampoo.setText(prof.getShampoo_name());
-        String temp = "";
-        for(String s: prof.getTags_list())
-            temp += s+" ";
-        tags.setText(temp);
+        name.setText("Your Name");
+        barber.setText("Barber's Name");
+        shampoo.setText("Your Shampoo");
+        tags.setText("#mullet #perm #wig");
     }
 
 
