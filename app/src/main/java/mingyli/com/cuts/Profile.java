@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Created by cng on 1/31/16.
  */
 public class Profile {
+    private String name;
     private double hair_length;
     private int cut_frequency;
     private String cut_name;
@@ -14,15 +15,16 @@ public class Profile {
     private ArrayList<String> tags_list;
 
     public Profile(){ //default profile
+        name = "John Smith";
         hair_length = 5.0;
         cut_frequency = 1;
         cut_name = "The Usual";
-        barber_name = "Eduardo";
-        shampoo_name = "Sham Poo";
+        barber_name = "Barber Eduardo";
+        shampoo_name = "Head and Shoulders";
         tags_list = new ArrayList<String>() {{
-            add("good");
-            add("dank");
-            add("haircut af");
+            add("#fade");
+            add("#buzzcut");
+            add("#perm");
         }};
 
     }
@@ -57,6 +59,9 @@ public class Profile {
         shampoo_name = shampoo;
     }
     //accessors
+    public String getName(){
+        return name;
+    }
     public double getHair_length(){
         return hair_length;
     }
