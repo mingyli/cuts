@@ -18,16 +18,33 @@ public class Profile {
         barber_name = "Eduardo";
 
     }
-    public Profile(double length, int freq, String barber, String shampoo, ArrayList<String> tags){
+    public Profile(double length, int freq, String barber, String shampoo, ArrayList<String> tags){ //decked out profile
         hair_length = length;
         cut_frequency = freq;
         barber_name = barber;
         shampoo_name = shampoo;
         tags_list = tags;
     }
+    //mutators
     public void addTag(String tag){
         tags_list.add(tag);
     }
+    public void setTags(ArrayList<String> tags){
+        tags_list = tags;
+    }
+    public void setHair_length(double length){
+        hair_length = length;
+    }
+    public void setCut_frequency(int freq){
+        cut_frequency = freq;
+    }
+    public void setBarber_name(String barber){
+        barber_name = barber;
+    }
+    public void setShampoo_name(String shampoo){
+        shampoo_name = shampoo;
+    }
+    //accessors
     public double getHair_length(){
         return hair_length;
     }

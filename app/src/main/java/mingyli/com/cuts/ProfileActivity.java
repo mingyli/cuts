@@ -10,11 +10,12 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 /**
  * Created by Ming on 1/31/2016.
  */
 public class ProfileActivity extends Activity {
-
 
 
     @Override
