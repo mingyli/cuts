@@ -1,7 +1,11 @@
 package mingyli.com.cuts;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,15 +14,28 @@ import android.widget.TextView;
  * Created by Ming on 1/31/2016.
  */
 public class UserProfileActivity extends Activity {
+    ImageView iv = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.userprofile);
 
-        ImageView iv = (ImageView) findViewById(R.id.imageView2);
-        iv.setImageResource(ImageAdapter.images[3]);
+        iv = (ImageView) findViewById(R.id.imageView2);
+        iv.setImageResource(R.drawable.takephoto);
         iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(takePictureIntent, 1);
+
+                }
+            }
+        });
 
         EditText name = (EditText) findViewById(R.id.nameText);
         EditText barber = (EditText) findViewById(R.id.barberNameText);
@@ -34,4 +51,16 @@ public class UserProfileActivity extends Activity {
             temp += s+" ";
         tags.setText(temp);
     }
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            iv.setImageBitmap(imageBitmap);
+        }
+    }
+
 }
