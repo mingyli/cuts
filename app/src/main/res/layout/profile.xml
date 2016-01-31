@@ -13,7 +13,8 @@
     <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="30dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -58,13 +59,12 @@
         <ToggleButton
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textOn="Like"
-            android:textOff="Unlike"
-            android:textColor="#ffff0004"
-            android:id="@+id/button"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            android:id="@+id/toggleButton"
             android:layout_margin="40dp"
             android:layout_alignParentRight="true"
-            android:checked="true" />
+             />
 
     </RelativeLayout>
 
