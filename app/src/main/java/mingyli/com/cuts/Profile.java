@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Profile {
     private double hair_length;
     private int cut_frequency;
+    private String cut_name;
     private String barber_name;
     private String shampoo_name;
     private ArrayList<String> tags_list;
@@ -18,9 +19,10 @@ public class Profile {
         barber_name = "Eduardo";
 
     }
-    public Profile(double length, int freq, String barber, String shampoo, ArrayList<String> tags){ //decked out profile
+    public Profile(double length, int freq, String cut, String barber, String shampoo, ArrayList<String> tags){ //decked out profile
         hair_length = length;
         cut_frequency = freq;
+        cut_name = cut;
         barber_name = barber;
         shampoo_name = shampoo;
         tags_list = tags;
@@ -44,6 +46,9 @@ public class Profile {
     public void setShampoo_name(String shampoo){
         shampoo_name = shampoo;
     }
+    public void setCut_name(String shampoo){
+        shampoo_name = shampoo;
+    }
     //accessors
     public double getHair_length(){
         return hair_length;
@@ -53,6 +58,9 @@ public class Profile {
     }
     public String getBarber_name(){
         return barber_name;
+    }
+    public String getCut_name(){
+        return cut_name;
     }
     public String getShampoo_name(){
         return shampoo_name;
