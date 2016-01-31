@@ -22,8 +22,6 @@ public class MainActivity extends ActionBarActivity {
         grid = (GridView)findViewById(R.id.gridView);
         grid.setAdapter(adapter);
 
-
-
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
