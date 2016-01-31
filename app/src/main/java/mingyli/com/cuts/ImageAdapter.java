@@ -24,6 +24,10 @@ public class ImageAdapter extends BaseAdapter{
             R.drawable.haircut2, R.drawable.haircut3,
             R.drawable.haircut4, R.drawable.haircut5,
             R.drawable.haircut6, R.drawable.haircut7,
+            R.drawable.haircut8, R.drawable.haircut9,
+            R.drawable.haircut10, R.drawable.haircut11,
+            R.drawable.haircut12, R.drawable.haircut13,
+            R.drawable.haircut14, R.drawable.haircut15
     };
 
 
