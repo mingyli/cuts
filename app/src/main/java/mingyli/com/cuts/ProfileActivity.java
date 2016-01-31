@@ -16,7 +16,7 @@ public class ProfileActivity extends Activity {
 
         int pos = getIntent().getExtras().getInt("selectedIndex");
 
-        Toast.makeText(ProfileActivity.this, pos+"", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(ProfileActivity.this, pos+"", Toast.LENGTH_SHORT).show();
 
         ImageView iv = (ImageView) findViewById(R.id.imageView2);
         iv.setImageResource(ImageAdapter.images[pos]);

@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name="ProfileActivity"></activity>
-
+        <activity android:name="UserProfileActivity"></activity>
     </application>
 
 </manifest>
