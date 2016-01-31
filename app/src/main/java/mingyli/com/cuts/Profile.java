@@ -16,7 +16,14 @@ public class Profile {
     public Profile(){ //default profile
         hair_length = 5.0;
         cut_frequency = 1;
+        cut_name = "The Usual";
         barber_name = "Eduardo";
+        shampoo_name = "Sham Poo";
+        tags_list = new ArrayList<String>() {{
+            add("good");
+            add("dank");
+            add("haircut af");
+        }};
 
     }
     public Profile(double length, int freq, String cut, String barber, String shampoo, ArrayList<String> tags){ //decked out profile
