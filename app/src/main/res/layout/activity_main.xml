@@ -18,6 +18,12 @@
                 android:layout_height="200px"
                 android:id="@+id/imageButton1"
                 android:src="@drawable/hair_henna" />
+
+            <Button
+                android:id="@+id/btnChangeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Image"/>
         </TableRow>
 
         <TableRow
@@ -33,6 +39,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:src="@drawable/hair_henna"
                 android:id="@+id/imageView" />
         </TableRow>
     </TableLayout>
