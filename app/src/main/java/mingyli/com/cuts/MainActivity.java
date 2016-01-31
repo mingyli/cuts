@@ -1,44 +1,45 @@
 package mingyli.com.cuts;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-    ImageButton imageButton;
+    GridView grid = null;
+    ImageAdapter adapter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.grid);
 
-        addListenerOnButton();
-    }
+        adapter = new ImageAdapter(MainActivity.this, "grid");
 
-    public void addListenerOnButton(){
-        imageButton = (ImageButton) findViewById(R.id.imageButton1);
+        grid = (GridView)findViewById(R.id.gridView);
+        grid.setAdapter(adapter);
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onClick(View arg0) {
-
-                Toast.makeText(MainActivity.this,
-                        "ImageButton is clicked!", Toast.LENGTH_SHORT).show();
-
+            public void onItemClick(AdapterView<?> arg0, View arg1, int pos,long id) {
+                Intent i = new Intent(MainActivity.this, GalleryActivity.class);
+                i.putExtra("selectedIndex", pos);
+                startActivity(i);
             }
-
         });
-
-
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
