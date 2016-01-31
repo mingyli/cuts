@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -21,12 +22,12 @@ public class ImageAdapter extends BaseAdapter{
     private String mode = "";
 
     int[] images = {
-            R.drawable.buds, R.drawable.cherry_34,
-            R.drawable.clouds_2, R.drawable.coffee_beans_2,
-            R.drawable.death_valley_sand_dunes, R.drawable.morning_glory_pool,
-            R.drawable.pink_flowers, R.drawable.sun_flower,
-            R.drawable.sunrise_3, R.drawable.yellow_rose_3,
+            R.drawable.haircut0, R.drawable.haircut1,
+            R.drawable.haircut2, R.drawable.haircut3,
+            R.drawable.haircut4, R.drawable.haircut5,
+            R.drawable.haircut6, R.drawable.haircut7,
     };
+
 
     public ImageAdapter(Activity act, String mode){
         inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -51,19 +52,15 @@ public class ImageAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-        if(mode.equalsIgnoreCase("grid")){
-            if (view == null) {
-                view = inflater.inflate(R.layout.each_image, null);
-            }
-            ImageView iv = (ImageView)view.findViewById(R.id.imageView);
-            iv.setImageResource(images[position]);
-        } else if(mode.equalsIgnoreCase("gallery")){
-            if (view == null) {
-                view = inflater.inflate(R.layout.each_image_gallery, null);
-            }
-            ImageView iv = (ImageView)view.findViewById(R.id.imageView);
-            iv.setImageResource(images[position]);
+        if (view == null) {
+            view = inflater.inflate(R.layout.each_image, null);
         }
+        ImageView iv = (ImageView)view.findViewById(R.id.imageView);
+
+        iv.setImageResource(images[position]);
+        iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        iv.setPadding(8, 8, 8, 8);
+
         return view;
     }
 

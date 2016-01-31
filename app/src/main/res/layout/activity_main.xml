@@ -22,22 +22,22 @@
         <ImageButton
             style="@style/GridButton"
             android:id="@+id/imageButton1"
-            android:src="@drawable/hair_henna" />
+            android:src="@drawable/haircut0" />
 
         <ImageButton
             style="@style/GridButton"
             android:id="@+id/imageButton2"
-            android:src="@drawable/hair_henna"/>
+            android:src="@drawable/haircut0"/>
 
 
         <ImageButton
             style="@style/GridButton"
             android:id="@+id/imageButton3"
-            android:src="@drawable/hair_henna" />
+            android:src="@drawable/haircut0" />
 
         <ImageButton
             style="@style/GridButton"
-            android:src="@drawable/hair_henna"
+            android:src="@drawable/haircut0"
             android:id="@+id/imageButton4" />
     </GridLayout>
 </RelativeLayout>

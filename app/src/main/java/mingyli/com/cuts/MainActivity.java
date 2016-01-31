@@ -28,11 +28,13 @@ public class MainActivity extends ActionBarActivity {
         grid = (GridView)findViewById(R.id.gridView);
         grid.setAdapter(adapter);
 
+
+
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int pos,long id) {
-                Intent i = new Intent(MainActivity.this, GalleryActivity.class);
+                Intent i = new Intent(MainActivity.this, ProfileActivity.class);
                 i.putExtra("selectedIndex", pos);
                 startActivity(i);
             }
