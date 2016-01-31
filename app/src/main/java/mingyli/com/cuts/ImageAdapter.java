@@ -59,7 +59,6 @@ public class ImageAdapter extends BaseAdapter{
 
         iv.setImageResource(images[position]);
         iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        iv.setPadding(8, 8, 8, 8);
 
         return view;
     }
